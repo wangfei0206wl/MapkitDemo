@@ -8,6 +8,7 @@
 
 #import "MapkitViewController.h"
 #import "PublicDefines.h"
+#import "MapViewController.h"
 
 @interface MapkitViewController () {
     NSArray *_arrMenus;
@@ -62,7 +63,8 @@
     switch(indexPath.row) {
         case 0:
         {
-
+            MapViewController *controller = [[MapViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
         }
             break;
         default:
