@@ -19,6 +19,16 @@
 		7BD92C1E19B56D0D0077C9E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD92C0619B56D0D0077C9E5 /* UIKit.framework */; };
 		7BD92C2619B56D0D0077C9E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BD92C2419B56D0D0077C9E5 /* InfoPlist.strings */; };
 		7BD92C2819B56D0D0077C9E5 /* MapkitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD92C2719B56D0D0077C9E5 /* MapkitDemoTests.m */; };
+		7BD92C3919B56EE00077C9E5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD92C3319B56EE00077C9E5 /* BaseViewController.m */; };
+		7BD92C3A19B56EE00077C9E5 /* btn_cancel_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD92C3619B56EE00077C9E5 /* btn_cancel_normal.png */; };
+		7BD92C3B19B56EE00077C9E5 /* btn_cancel_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD92C3719B56EE00077C9E5 /* btn_cancel_pressed.png */; };
+		7BD92C3C19B56EE00077C9E5 /* common_bacArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD92C3819B56EE00077C9E5 /* common_bacArrow@2x.png */; };
+		7BD92C3E19B56EFD0077C9E5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD92C3D19B56EFD0077C9E5 /* MapKit.framework */; };
+		7BD92C4019B56F0A0077C9E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD92C3F19B56F0A0077C9E5 /* CoreLocation.framework */; };
+		7BD92C4319B56F4E0077C9E5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD92C4219B56F4E0077C9E5 /* MainViewController.m */; };
+		7BD92C4919B571050077C9E5 /* MapkitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD92C4819B571050077C9E5 /* MapkitViewController.m */; };
+		7BD92C4C19B571140077C9E5 /* BMapkitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD92C4B19B571140077C9E5 /* BMapkitViewController.m */; };
+		7BD92C4F19B571220077C9E5 /* GMapkitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD92C4E19B571220077C9E5 /* GMapkitViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +58,22 @@
 		7BD92C2319B56D0D0077C9E5 /* MapkitDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapkitDemoTests-Info.plist"; sourceTree = "<group>"; };
 		7BD92C2519B56D0D0077C9E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BD92C2719B56D0D0077C9E5 /* MapkitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapkitDemoTests.m; sourceTree = "<group>"; };
+		7BD92C3219B56EE00077C9E5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		7BD92C3319B56EE00077C9E5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		7BD92C3419B56EE00077C9E5 /* PublicDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicDefines.h; sourceTree = "<group>"; };
+		7BD92C3619B56EE00077C9E5 /* btn_cancel_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_cancel_normal.png; sourceTree = "<group>"; };
+		7BD92C3719B56EE00077C9E5 /* btn_cancel_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_cancel_pressed.png; sourceTree = "<group>"; };
+		7BD92C3819B56EE00077C9E5 /* common_bacArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bacArrow@2x.png"; sourceTree = "<group>"; };
+		7BD92C3D19B56EFD0077C9E5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7BD92C3F19B56F0A0077C9E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7BD92C4119B56F4E0077C9E5 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7BD92C4219B56F4E0077C9E5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7BD92C4719B571050077C9E5 /* MapkitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapkitViewController.h; sourceTree = "<group>"; };
+		7BD92C4819B571050077C9E5 /* MapkitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapkitViewController.m; sourceTree = "<group>"; };
+		7BD92C4A19B571140077C9E5 /* BMapkitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapkitViewController.h; sourceTree = "<group>"; };
+		7BD92C4B19B571140077C9E5 /* BMapkitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMapkitViewController.m; sourceTree = "<group>"; };
+		7BD92C4D19B571220077C9E5 /* GMapkitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMapkitViewController.h; sourceTree = "<group>"; };
+		7BD92C4E19B571220077C9E5 /* GMapkitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMapkitViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD92C4019B56F0A0077C9E5 /* CoreLocation.framework in Frameworks */,
+				7BD92C3E19B56EFD0077C9E5 /* MapKit.framework in Frameworks */,
 				7BD92C0519B56D0D0077C9E5 /* CoreGraphics.framework in Frameworks */,
 				7BD92C0719B56D0D0077C9E5 /* UIKit.framework in Frameworks */,
 				7BD92C0319B56D0D0077C9E5 /* Foundation.framework in Frameworks */,
@@ -96,6 +124,8 @@
 		7BD92C0119B56D0D0077C9E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BD92C3F19B56F0A0077C9E5 /* CoreLocation.framework */,
+				7BD92C3D19B56EFD0077C9E5 /* MapKit.framework */,
 				7BD92C0219B56D0D0077C9E5 /* Foundation.framework */,
 				7BD92C0419B56D0D0077C9E5 /* CoreGraphics.framework */,
 				7BD92C0619B56D0D0077C9E5 /* UIKit.framework */,
@@ -107,8 +137,15 @@
 		7BD92C0819B56D0D0077C9E5 /* MapkitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7BD92C4619B570DE0077C9E5 /* Mapkit */,
+				7BD92C4419B570D90077C9E5 /* BMapkit */,
+				7BD92C4519B570D90077C9E5 /* GMapkit */,
+				7BD92C3519B56EE00077C9E5 /* icon */,
+				7BD92C3119B56EE00077C9E5 /* Common */,
 				7BD92C1119B56D0D0077C9E5 /* AppDelegate.h */,
 				7BD92C1219B56D0D0077C9E5 /* AppDelegate.m */,
+				7BD92C4119B56F4E0077C9E5 /* MainViewController.h */,
+				7BD92C4219B56F4E0077C9E5 /* MainViewController.m */,
 				7BD92C1419B56D0D0077C9E5 /* Images.xcassets */,
 				7BD92C0919B56D0D0077C9E5 /* Supporting Files */,
 			);
@@ -142,6 +179,53 @@
 				7BD92C2419B56D0D0077C9E5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BD92C3119B56EE00077C9E5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7BD92C3219B56EE00077C9E5 /* BaseViewController.h */,
+				7BD92C3319B56EE00077C9E5 /* BaseViewController.m */,
+				7BD92C3419B56EE00077C9E5 /* PublicDefines.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7BD92C3519B56EE00077C9E5 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				7BD92C3619B56EE00077C9E5 /* btn_cancel_normal.png */,
+				7BD92C3719B56EE00077C9E5 /* btn_cancel_pressed.png */,
+				7BD92C3819B56EE00077C9E5 /* common_bacArrow@2x.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
+		7BD92C4419B570D90077C9E5 /* BMapkit */ = {
+			isa = PBXGroup;
+			children = (
+				7BD92C4A19B571140077C9E5 /* BMapkitViewController.h */,
+				7BD92C4B19B571140077C9E5 /* BMapkitViewController.m */,
+			);
+			path = BMapkit;
+			sourceTree = "<group>";
+		};
+		7BD92C4519B570D90077C9E5 /* GMapkit */ = {
+			isa = PBXGroup;
+			children = (
+				7BD92C4D19B571220077C9E5 /* GMapkitViewController.h */,
+				7BD92C4E19B571220077C9E5 /* GMapkitViewController.m */,
+			);
+			path = GMapkit;
+			sourceTree = "<group>";
+		};
+		7BD92C4619B570DE0077C9E5 /* Mapkit */ = {
+			isa = PBXGroup;
+			children = (
+				7BD92C4719B571050077C9E5 /* MapkitViewController.h */,
+				7BD92C4819B571050077C9E5 /* MapkitViewController.m */,
+			);
+			path = Mapkit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +303,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD92C3C19B56EE00077C9E5 /* common_bacArrow@2x.png in Resources */,
 				7BD92C0D19B56D0D0077C9E5 /* InfoPlist.strings in Resources */,
 				7BD92C1519B56D0D0077C9E5 /* Images.xcassets in Resources */,
+				7BD92C3A19B56EE00077C9E5 /* btn_cancel_normal.png in Resources */,
+				7BD92C3B19B56EE00077C9E5 /* btn_cancel_pressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +327,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD92C1319B56D0D0077C9E5 /* AppDelegate.m in Sources */,
+				7BD92C4C19B571140077C9E5 /* BMapkitViewController.m in Sources */,
+				7BD92C4919B571050077C9E5 /* MapkitViewController.m in Sources */,
+				7BD92C3919B56EE00077C9E5 /* BaseViewController.m in Sources */,
+				7BD92C4F19B571220077C9E5 /* GMapkitViewController.m in Sources */,
 				7BD92C0F19B56D0D0077C9E5 /* main.m in Sources */,
+				7BD92C4319B56F4E0077C9E5 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
