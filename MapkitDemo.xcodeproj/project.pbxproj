@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BC25FAD19B723D100278938 /* startAnnotation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BC25FAC19B723D100278938 /* startAnnotation@2x.png */; };
+		7BCCA60F19B6BA6C00EC6CEB /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCCA60E19B6BA6C00EC6CEB /* TestObject.m */; };
+		7BCCA61219B6BEB100EC6CEB /* AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCCA61119B6BEB100EC6CEB /* AnnotationViewController.m */; };
 		7BD92C0319B56D0D0077C9E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD92C0219B56D0D0077C9E5 /* Foundation.framework */; };
 		7BD92C0519B56D0D0077C9E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD92C0419B56D0D0077C9E5 /* CoreGraphics.framework */; };
 		7BD92C0719B56D0D0077C9E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD92C0619B56D0D0077C9E5 /* UIKit.framework */; };
@@ -45,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7BC25FAC19B723D100278938 /* startAnnotation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startAnnotation@2x.png"; sourceTree = "<group>"; };
+		7BCCA60D19B6BA6C00EC6CEB /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
+		7BCCA60E19B6BA6C00EC6CEB /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		7BCCA61019B6BEB100EC6CEB /* AnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationViewController.h; sourceTree = "<group>"; };
+		7BCCA61119B6BEB100EC6CEB /* AnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationViewController.m; sourceTree = "<group>"; };
 		7BD92BFF19B56D0D0077C9E5 /* MapkitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapkitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD92C0219B56D0D0077C9E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BD92C0419B56D0D0077C9E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,6 +161,8 @@
 				7BD92C1219B56D0D0077C9E5 /* AppDelegate.m */,
 				7BD92C4119B56F4E0077C9E5 /* MainViewController.h */,
 				7BD92C4219B56F4E0077C9E5 /* MainViewController.m */,
+				7BCCA60D19B6BA6C00EC6CEB /* TestObject.h */,
+				7BCCA60E19B6BA6C00EC6CEB /* TestObject.m */,
 				7BD92C1419B56D0D0077C9E5 /* Images.xcassets */,
 				7BD92C0919B56D0D0077C9E5 /* Supporting Files */,
 			);
@@ -201,6 +211,7 @@
 		7BD92C3519B56EE00077C9E5 /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				7BC25FAC19B723D100278938 /* startAnnotation@2x.png */,
 				7BD92C5519B5CF360077C9E5 /* btn_gpslocation_down@2x.png */,
 				7BD92C5619B5CF360077C9E5 /* btn_gpslocation_normal@2x.png */,
 				7BD92C3619B56EE00077C9E5 /* btn_cancel_normal.png */,
@@ -235,6 +246,8 @@
 				7BD92C4819B571050077C9E5 /* MapkitViewController.m */,
 				7BD92C5219B5C7630077C9E5 /* MapViewController.h */,
 				7BD92C5319B5C7630077C9E5 /* MapViewController.m */,
+				7BCCA61019B6BEB100EC6CEB /* AnnotationViewController.h */,
+				7BCCA61119B6BEB100EC6CEB /* AnnotationViewController.m */,
 			);
 			path = Mapkit;
 			sourceTree = "<group>";
@@ -318,6 +331,7 @@
 				7BD92C5719B5CF360077C9E5 /* btn_gpslocation_down@2x.png in Resources */,
 				7BD92C0D19B56D0D0077C9E5 /* InfoPlist.strings in Resources */,
 				7BD92C1519B56D0D0077C9E5 /* Images.xcassets in Resources */,
+				7BC25FAD19B723D100278938 /* startAnnotation@2x.png in Resources */,
 				7BD92C3A19B56EE00077C9E5 /* btn_cancel_normal.png in Resources */,
 				7BD92C3B19B56EE00077C9E5 /* btn_cancel_pressed.png in Resources */,
 				7BD92C5819B5CF360077C9E5 /* btn_gpslocation_normal@2x.png in Resources */,
@@ -340,11 +354,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD92C1319B56D0D0077C9E5 /* AppDelegate.m in Sources */,
+				7BCCA60F19B6BA6C00EC6CEB /* TestObject.m in Sources */,
 				7BD92C4C19B571140077C9E5 /* BMapkitViewController.m in Sources */,
 				7BD92C4919B571050077C9E5 /* MapkitViewController.m in Sources */,
 				7BD92C5419B5C7630077C9E5 /* MapViewController.m in Sources */,
 				7BD92C3919B56EE00077C9E5 /* BaseViewController.m in Sources */,
 				7BD92C4F19B571220077C9E5 /* GMapkitViewController.m in Sources */,
+				7BCCA61219B6BEB100EC6CEB /* AnnotationViewController.m in Sources */,
 				7BD92C0F19B56D0D0077C9E5 /* main.m in Sources */,
 				7BD92C4319B56F4E0077C9E5 /* MainViewController.m in Sources */,
 			);

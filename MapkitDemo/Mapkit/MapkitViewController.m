@@ -9,6 +9,7 @@
 #import "MapkitViewController.h"
 #import "PublicDefines.h"
 #import "MapViewController.h"
+#import "AnnotationViewController.h"
 
 @interface MapkitViewController () {
     NSArray *_arrMenus;
@@ -28,7 +29,7 @@
 }
 
 - (void)initDatas {
-    _arrMenus = [NSArray arrayWithObjects:@"Mapkit显示", nil];
+    _arrMenus = [NSArray arrayWithObjects:@"Mapview显示", @"Annotation使用", nil];
 }
 
 - (void)createViews {
@@ -64,6 +65,12 @@
         case 0:
         {
             MapViewController *controller = [[MapViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            break;
+        case 1:
+        {
+            AnnotationViewController *controller = [[AnnotationViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;

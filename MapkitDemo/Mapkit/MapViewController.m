@@ -51,7 +51,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setTitle:@"MKMapView使用"];
+    [self setTitle:@"Mapview显示"];
     [self createViews];
 }
 
