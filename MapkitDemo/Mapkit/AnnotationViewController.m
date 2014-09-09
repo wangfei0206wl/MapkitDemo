@@ -259,6 +259,8 @@
 
 - (void)MyAnnotationDidNavi:(MyAnnotationView *)view {
     NSLog(@"---------broadcast to main view controller.");
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"点击了按钮" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 @end
