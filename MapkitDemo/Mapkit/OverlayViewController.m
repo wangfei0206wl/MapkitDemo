@@ -9,8 +9,13 @@
 #import "OverlayViewController.h"
 #import "PublicDefines.h"
 
+#define ENABLE_OVERLAY_RENDER   0
+
 @interface OverlayViewController () <MKMapViewDelegate> {
     MKMapView *_mkMapView;
+    
+    MKPolyline *_polyline;
+    MKPolygon *_polygon;
 }
 
 @end
@@ -36,8 +41,8 @@
     CGFloat offsetY = 20;
     UIButton *btnTestInit = [UIButton buttonWithType:UIButtonTypeSystem];
     btnTestInit.frame = CGRectMake(30, offsetY, 120, 30);
-    [btnTestInit setTitle:@"添加层" forState:UIControlStateNormal];
-    [btnTestInit addTarget:self action:@selector(onClickOverlay:) forControlEvents:UIControlEventTouchUpInside];
+    [btnTestInit setTitle:@"添加大地曲线层" forState:UIControlStateNormal];
+    [btnTestInit addTarget:self action:@selector(onClickPolylineOverlay:) forControlEvents:UIControlEventTouchUpInside];
     [contentView addSubview:btnTestInit];
     
     btnTestInit = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -52,6 +57,7 @@
     _mkMapView.mapType = MKMapTypeStandard;
     _mkMapView.showsUserLocation = YES;
     _mkMapView.delegate = self;
+//    _mkMapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
     
     [contentView addSubview:_mkMapView];
 }
@@ -87,12 +93,73 @@
     [self animateToPlace:mapView.userLocation.coordinate coordinateSpan:MKCoordinateSpanMake(0.4, 0.4)];
 }
 
-- (void)onClickOverlay:(id)sender {
+#if ENABLE_OVERLAY_RENDER
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay {
+    MKOverlayRenderer *overlayRenderer = nil;
     
+    if ([overlay isKindOfClass:[MKPolyline class]]) {
+        // 绘制大地曲线
+        MKPolylineRenderer *polylineRenderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
+        polylineRenderer.lineWidth = 4.0f;
+        polylineRenderer.strokeColor = [UIColor blackColor];
+        overlayRenderer = polylineRenderer;
+    }
+    else if ([overlay isKindOfClass:[MKPolygon class]]) {
+        MKPolygonRenderer *polygonRenderer = [[MKPolygonRenderer alloc] initWithPolygon:overlay];
+        polygonRenderer.lineWidth = 2.0f;
+        polygonRenderer.strokeColor = [UIColor blackColor];
+        polygonRenderer.fillColor = [UIColor redColor];
+        overlayRenderer = polygonRenderer;
+    }
+    
+    return overlayRenderer;
+}
+#else
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
+    MKOverlayView *overlayView = nil;
+    
+    if ([overlay isKindOfClass:[MKPolyline class]]) {
+        // 绘制大地曲线
+        MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
+        polylineView.lineWidth = 4.0f;
+        polylineView.strokeColor = [UIColor blackColor];
+        overlayView = polylineView;
+    }
+    else if ([overlay isKindOfClass:[MKPolygon class]]) {
+        MKPolygonView *polygonView = [[MKPolygonView alloc] initWithPolygon:overlay];
+        polygonView.lineWidth = 2.0f;
+        polygonView.strokeColor = [UIColor blackColor];
+        polygonView.fillColor = [UIColor redColor];
+        overlayView = polygonView;
+    }
+    
+    return overlayView;
+}
+#endif
+- (void)onClickPolylineOverlay:(id)sender {
+    if (_polyline) {
+        [_mkMapView removeOverlay:_polyline];
+        _polyline = nil;
+    }
+    
+    CLLocationCoordinate2D coords[] = {{39.905151, 116.401726}, {39.785151, 116.521726}, {39.865151, 116.301726}};
+    int count = sizeof(coords) / sizeof(CLLocationCoordinate2D);
+    _polyline = [MKPolyline polylineWithCoordinates:coords count:count];
+    
+    [_mkMapView addOverlay:_polyline];
 }
 
 - (void)onClickCustomOverlay:(id)sender {
+    if (_polygon) {
+        [_mkMapView removeOverlay:_polygon];
+        _polygon = nil;
+    }
     
+    CLLocationCoordinate2D coords[] = {{39.905151, 116.401726}, {39.805151, 116.521726}, {39.905151, 116.201726}};
+    int count = sizeof(coords) / sizeof(CLLocationCoordinate2D);
+    _polygon = [MKPolygon polygonWithCoordinates:coords count:count];
+    
+    [_mkMapView addOverlay:_polygon];
 }
 
 @end
