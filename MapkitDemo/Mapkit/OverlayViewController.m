@@ -93,7 +93,7 @@
     [self animateToPlace:mapView.userLocation.coordinate coordinateSpan:MKCoordinateSpanMake(0.4, 0.4)];
 }
 
-#if ENABLE_OVERLAY_RENDER
+//#if ENABLE_OVERLAY_RENDER
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay {
     MKOverlayRenderer *overlayRenderer = nil;
     
@@ -114,7 +114,7 @@
     
     return overlayRenderer;
 }
-#else
+//#else
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
     MKOverlayView *overlayView = nil;
     
@@ -135,7 +135,7 @@
     
     return overlayView;
 }
-#endif
+//#endif
 - (void)onClickPolylineOverlay:(id)sender {
     if (_polyline) {
         [_mkMapView removeOverlay:_polyline];
