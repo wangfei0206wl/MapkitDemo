@@ -11,6 +11,7 @@
 #import "MapViewController.h"
 #import "AnnotationViewController.h"
 #import "OverlayViewController.h"
+#import "OverlayTwoViewController.h"
 
 @interface MapkitViewController () {
     NSArray *_arrMenus;
@@ -30,7 +31,7 @@
 }
 
 - (void)initDatas {
-    _arrMenus = [NSArray arrayWithObjects:@"Mapview显示", @"Annotation使用", @"Overlay使用", nil];
+    _arrMenus = [NSArray arrayWithObjects:@"Mapview显示", @"Annotation使用", @"Overlay使用", @"Overlay使用之二", nil];
 }
 
 - (void)createViews {
@@ -78,6 +79,12 @@
         case 2:
         {
             OverlayViewController *controller = [[OverlayViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            break;
+        case 3:
+        {
+            OverlayTwoViewController *controller = [[OverlayTwoViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;

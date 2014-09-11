@@ -40,6 +40,7 @@
 		7BD92C5419B5C7630077C9E5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD92C5319B5C7630077C9E5 /* MapViewController.m */; };
 		7BD92C5719B5CF360077C9E5 /* btn_gpslocation_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD92C5519B5CF360077C9E5 /* btn_gpslocation_down@2x.png */; };
 		7BD92C5819B5CF360077C9E5 /* btn_gpslocation_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD92C5619B5CF360077C9E5 /* btn_gpslocation_normal@2x.png */; };
+		7BE3F37C19C16DD4003E3805 /* OverlayTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3F37B19C16DD4003E3805 /* OverlayTwoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		7BD92C5319B5C7630077C9E5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7BD92C5519B5CF360077C9E5 /* btn_gpslocation_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_gpslocation_down@2x.png"; sourceTree = "<group>"; };
 		7BD92C5619B5CF360077C9E5 /* btn_gpslocation_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_gpslocation_normal@2x.png"; sourceTree = "<group>"; };
+		7BE3F37A19C16DD4003E3805 /* OverlayTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayTwoViewController.h; sourceTree = "<group>"; };
+		7BE3F37B19C16DD4003E3805 /* OverlayTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayTwoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +268,8 @@
 				7BCCA61119B6BEB100EC6CEB /* AnnotationViewController.m */,
 				7BB6539519BE97190081FEB6 /* OverlayViewController.h */,
 				7BB6539619BE97190081FEB6 /* OverlayViewController.m */,
+				7BE3F37A19C16DD4003E3805 /* OverlayTwoViewController.h */,
+				7BE3F37B19C16DD4003E3805 /* OverlayTwoViewController.m */,
 			);
 			path = Mapkit;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				7BD92C5419B5C7630077C9E5 /* MapViewController.m in Sources */,
 				7BD92C3919B56EE00077C9E5 /* BaseViewController.m in Sources */,
 				7BD92C4F19B571220077C9E5 /* GMapkitViewController.m in Sources */,
+				7BE3F37C19C16DD4003E3805 /* OverlayTwoViewController.m in Sources */,
 				7BCCA61219B6BEB100EC6CEB /* AnnotationViewController.m in Sources */,
 				7BD92C0F19B56D0D0077C9E5 /* main.m in Sources */,
 				7BD92C4319B56F4E0077C9E5 /* MainViewController.m in Sources */,
