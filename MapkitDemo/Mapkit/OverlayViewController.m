@@ -41,14 +41,14 @@
     CGFloat offsetY = 20;
     UIButton *btnTestInit = [UIButton buttonWithType:UIButtonTypeSystem];
     btnTestInit.frame = CGRectMake(30, offsetY, 120, 30);
-    [btnTestInit setTitle:@"添加大地曲线层" forState:UIControlStateNormal];
+    [btnTestInit setTitle:@"添加曲线层" forState:UIControlStateNormal];
     [btnTestInit addTarget:self action:@selector(onClickPolylineOverlay:) forControlEvents:UIControlEventTouchUpInside];
     [contentView addSubview:btnTestInit];
     
     btnTestInit = [UIButton buttonWithType:UIButtonTypeSystem];
     btnTestInit.frame = CGRectMake(170, offsetY, 120, 30);
-    [btnTestInit setTitle:@"添加自定义层" forState:UIControlStateNormal];
-    [btnTestInit addTarget:self action:@selector(onClickCustomOverlay:) forControlEvents:UIControlEventTouchUpInside];
+    [btnTestInit setTitle:@"添加多边形" forState:UIControlStateNormal];
+    [btnTestInit addTarget:self action:@selector(onClickPolygonOverlay:) forControlEvents:UIControlEventTouchUpInside];
     [contentView addSubview:btnTestInit];
     
     offsetY += (30 + 20);
@@ -98,7 +98,7 @@
     MKOverlayRenderer *overlayRenderer = nil;
     
     if ([overlay isKindOfClass:[MKPolyline class]]) {
-        // 绘制大地曲线
+        // 绘制曲线
         MKPolylineRenderer *polylineRenderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
         polylineRenderer.lineWidth = 4.0f;
         polylineRenderer.strokeColor = [UIColor blackColor];
@@ -119,7 +119,7 @@
     MKOverlayView *overlayView = nil;
     
     if ([overlay isKindOfClass:[MKPolyline class]]) {
-        // 绘制大地曲线
+        // 绘制曲线
         MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
         polylineView.lineWidth = 4.0f;
         polylineView.strokeColor = [UIColor blackColor];
@@ -149,7 +149,7 @@
     [_mkMapView addOverlay:_polyline];
 }
 
-- (void)onClickCustomOverlay:(id)sender {
+- (void)onClickPolygonOverlay:(id)sender {
     if (_polygon) {
         [_mkMapView removeOverlay:_polygon];
         _polygon = nil;
