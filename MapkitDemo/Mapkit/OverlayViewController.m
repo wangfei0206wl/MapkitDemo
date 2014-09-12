@@ -141,7 +141,11 @@
         [_mkMapView removeOverlay:_polyline];
         _polyline = nil;
     }
-    
+    if (_polygon) {
+        [_mkMapView removeOverlay:_polygon];
+        _polygon = nil;
+    }
+ 
     CLLocationCoordinate2D coords[] = {{39.905151, 116.401726}, {39.785151, 116.521726}, {39.865151, 116.301726}};
     int count = sizeof(coords) / sizeof(CLLocationCoordinate2D);
     _polyline = [MKPolyline polylineWithCoordinates:coords count:count];
@@ -150,6 +154,10 @@
 }
 
 - (void)onClickPolygonOverlay:(id)sender {
+    if (_polyline) {
+        [_mkMapView removeOverlay:_polyline];
+        _polyline = nil;
+    }
     if (_polygon) {
         [_mkMapView removeOverlay:_polygon];
         _polygon = nil;

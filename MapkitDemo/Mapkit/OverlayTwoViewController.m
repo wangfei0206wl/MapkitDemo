@@ -11,6 +11,9 @@
 
 @interface OverlayTwoViewController () <MKMapViewDelegate> {
     MKMapView *_mkMapView;
+    
+    MKCircle *_circleOverLay;
+    MKGeodesicPolyline *_geodesicPolyline;
 }
 
 @end
@@ -87,12 +90,78 @@
     [self animateToPlace:mapView.userLocation.coordinate coordinateSpan:MKCoordinateSpanMake(0.4, 0.4)];
 }
 
-- (void)onClickCircle:(id)sender {
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay {
+    MKOverlayRenderer *overLayRenderer = nil;
     
+    if ([overlay isKindOfClass:[MKCircle class]]) {
+        MKCircleRenderer *renderer = [[MKCircleRenderer alloc] initWithCircle:overlay];
+        renderer.lineWidth = 2.0f;
+        renderer.strokeColor = [UIColor blackColor];
+        renderer.fillColor = [UIColor redColor];
+        
+        overLayRenderer = renderer;
+    }
+    else if ([overlay isKindOfClass:[MKGeodesicPolyline class]]) {
+        MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
+        renderer.lineWidth = 2.0f;
+        renderer.strokeColor = [UIColor blackColor];
+        
+        overLayRenderer = renderer;
+    }
+    
+    return overLayRenderer;
+}
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
+    MKOverlayView *overLayView = nil;
+    
+    if ([overlay isKindOfClass:[MKCircle class]]) {
+        MKCircleView *view = [[MKCircleView alloc] initWithCircle:overlay];
+        view.lineWidth = 2.0f;
+        view.strokeColor = [UIColor blackColor];
+        view.fillColor = [UIColor redColor];
+        
+        overLayView = view;
+    }
+    else if ([overlay isKindOfClass:[MKGeodesicPolyline class]]) {
+        MKPolylineView *view = [[MKPolylineView alloc] initWithPolyline:overlay];
+        view.lineWidth = 2.0f;
+        view.strokeColor = [UIColor blackColor];
+        
+        overLayView = view;
+    }
+    
+    return overLayView;
+}
+
+- (void)onClickCircle:(id)sender {
+    if (_geodesicPolyline) {
+        [_mkMapView removeOverlay:_geodesicPolyline];
+        _geodesicPolyline = nil;
+    }
+    if (_circleOverLay) {
+        [_mkMapView removeOverlay:_circleOverLay];
+        _circleOverLay = nil;
+    }
+    
+    _circleOverLay = [MKCircle circleWithCenterCoordinate:_mkMapView.userLocation.coordinate radius:20000];
+    [_mkMapView addOverlay:_circleOverLay];
 }
 
 - (void)onClickGeodesicPolyline:(id)sender {
-    
+    if (_geodesicPolyline) {
+        [_mkMapView removeOverlay:_geodesicPolyline];
+        _geodesicPolyline = nil;
+    }
+    if (_circleOverLay) {
+        [_mkMapView removeOverlay:_circleOverLay];
+        _circleOverLay = nil;
+    }
+ 
+    CLLocationCoordinate2D coords[] = {{39.905151, 116.401726}, {39.785151, 116.521726}, {39.865151, 116.301726}};
+    int count = sizeof(coords) / sizeof(CLLocationCoordinate2D);
+    _geodesicPolyline = [MKGeodesicPolyline polylineWithCoordinates:coords count:count];
+    [_mkMapView addOverlay:_geodesicPolyline];
 }
 
 @end
