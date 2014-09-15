@@ -9,6 +9,17 @@
 #import "TileOverlayViewController.h"
 #import "PublicDefines.h"
 
+@implementation MYTileOverlay
+
+- (NSURL *)URLForTilePath:(MKTileOverlayPath)path {
+    NSString *urlString = [NSString stringWithFormat:@"http://58.83.237.121/TrafficTile?x=%d&y=%d&zoom=%d&time=6789", path.x, path.y, path.z];
+    NSURL *url = [[NSURL alloc] initWithString:urlString];
+    
+    return url;
+}
+
+@end
+
 @interface TileOverlayViewController () <MKMapViewDelegate> {
     MKMapView *_mkMapView;
     
@@ -107,7 +118,7 @@
         _tileOverlay = nil;
     }
     
-    _tileOverlay = [[MKTileOverlay alloc] initWithURLTemplate:@"http://58.83.237.121/TrafficTile?x={x}&y={y}&zoom={z}&time=6789"];
+    _tileOverlay = [[MYTileOverlay alloc] initWithURLTemplate:@"http://58.83.237.121/TrafficTile?x={x}&y={y}&zoom={z}&time=6789"];
     _tileOverlay.minimumZ = 5;
     _tileOverlay.maximumZ = 18;
     

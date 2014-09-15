@@ -9,6 +9,12 @@
 #import "BaseViewController.h"
 #import <MapKit/MapKit.h>
 
+// 自定义MKTileOverlay
+// 可以重写部分函数，来修改url
+@interface MYTileOverlay : MKTileOverlay
+
+@end
+
 /*
  地图添加MKTileOverlay(瓦片层) ---- ios7及以后版本才有
  1、TileOverlay
