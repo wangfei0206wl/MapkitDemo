@@ -78,6 +78,14 @@
     [self createViews];
 }
 
+- (void)dealloc {
+    if (_tileOverlay) {
+        [_mkMapView removeOverlay:_tileOverlay];
+        _tileOverlay = nil;
+    }
+    NSLog(@"--------dealloc");
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

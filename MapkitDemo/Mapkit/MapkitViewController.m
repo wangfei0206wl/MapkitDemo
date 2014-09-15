@@ -13,6 +13,8 @@
 #import "OverlayViewController.h"
 #import "OverlayTwoViewController.h"
 #import "TileOverlayViewController.h"
+#import "LocalSearchViewController.h"
+#import "DirectionViewController.h"
 
 @interface MapkitViewController () {
     NSArray *_arrMenus;
@@ -32,7 +34,7 @@
 }
 
 - (void)initDatas {
-    _arrMenus = [NSArray arrayWithObjects:@"Mapview显示", @"Annotation使用", @"Overlay使用", @"Overlay使用之二", @"TileOverlay使用", nil];
+    _arrMenus = [NSArray arrayWithObjects:@"Mapview显示", @"Annotation使用", @"Overlay使用", @"Overlay使用之二", @"TileOverlay使用", @"LocalSearch使用", @"Direction使用", nil];
 }
 
 - (void)createViews {
@@ -92,6 +94,18 @@
         case 4:
         {
             TileOverlayViewController *controller = [[TileOverlayViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            break;
+        case 5:
+        {
+            LocalSearchViewController *controller = [[LocalSearchViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            break;
+        case 6:
+        {
+            DirectionViewController *controller = [[DirectionViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;
