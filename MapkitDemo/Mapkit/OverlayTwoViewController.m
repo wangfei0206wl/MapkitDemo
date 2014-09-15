@@ -98,6 +98,7 @@
         renderer.lineWidth = 2.0f;
         renderer.strokeColor = [UIColor blackColor];
         renderer.fillColor = [UIColor redColor];
+        renderer.alpha = 0.5f;
         
         overLayRenderer = renderer;
     }
@@ -120,6 +121,7 @@
         view.lineWidth = 2.0f;
         view.strokeColor = [UIColor blackColor];
         view.fillColor = [UIColor redColor];
+        view.alpha = 0.5;
         
         overLayView = view;
     }
