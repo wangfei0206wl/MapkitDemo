@@ -13,6 +13,7 @@
     MKMapView *_mkMapView;
     
     MKTileOverlay *_tileOverlay;
+    MKTileOverlayRenderer *_tileOverlayRenderer;
 }
 
 @end
@@ -42,11 +43,11 @@
     [btnTestInit addTarget:self action:@selector(onClickTileOverlay:) forControlEvents:UIControlEventTouchUpInside];
     [contentView addSubview:btnTestInit];
     
-//    btnTestInit = [UIButton buttonWithType:UIButtonTypeSystem];
-//    btnTestInit.frame = CGRectMake(170, offsetY, 120, 30);
-//    [btnTestInit setTitle:@"添加大地曲线" forState:UIControlStateNormal];
-//    [btnTestInit addTarget:self action:@selector(onClickGeodesicPolyline:) forControlEvents:UIControlEventTouchUpInside];
-//    [contentView addSubview:btnTestInit];
+    btnTestInit = [UIButton buttonWithType:UIButtonTypeSystem];
+    btnTestInit.frame = CGRectMake(170, offsetY, 120, 30);
+    [btnTestInit setTitle:@"刷新瓦片层" forState:UIControlStateNormal];
+    [btnTestInit addTarget:self action:@selector(onClickRefreshOverlay:) forControlEvents:UIControlEventTouchUpInside];
+    [contentView addSubview:btnTestInit];
     
     offsetY += (30 + 20);
     height -= offsetY;
@@ -86,15 +87,15 @@
 #pragma mark MKMapViewDelegate
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
-    [self animateToPlace:mapView.userLocation.coordinate coordinateSpan:MKCoordinateSpanMake(0.4, 0.4)];
+    [self animateToPlace:mapView.userLocation.coordinate coordinateSpan:MKCoordinateSpanMake(0.1, 0.1)];
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay {
     MKOverlayRenderer *overlayRenderer = nil;
     
     if ([overlay isKindOfClass:[MKTileOverlay class]]) {
-        MKTileOverlayRenderer *renderer = [[MKTileOverlayRenderer alloc] initWithTileOverlay:overlay];
-        overlayRenderer = renderer;
+        _tileOverlayRenderer = [[MKTileOverlayRenderer alloc] initWithTileOverlay:overlay];
+        overlayRenderer = _tileOverlayRenderer;
     }
     
     return overlayRenderer;
@@ -107,10 +108,14 @@
     }
     
     _tileOverlay = [[MKTileOverlay alloc] initWithURLTemplate:@"http://58.83.237.121/TrafficTile?x={x}&y={y}&zoom={z}&time=6789"];
-    _tileOverlay.minimumZ = 8;
-    _tileOverlay.maximumZ = 14;
+    _tileOverlay.minimumZ = 5;
+    _tileOverlay.maximumZ = 18;
     
     [_mkMapView addOverlay:_tileOverlay];
+}
+
+- (void)onClickRefreshOverlay:(id)sender {
+    [_tileOverlayRenderer reloadData];
 }
 
 @end
