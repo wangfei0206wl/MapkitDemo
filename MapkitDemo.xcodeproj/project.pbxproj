@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B8F2A0919C6D19F00B316CB /* LocalSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F2A0819C6D19F00B316CB /* LocalSearchViewController.m */; };
 		3B8F2A0C19C6D1B300B316CB /* DirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F2A0B19C6D1B300B316CB /* DirectionViewController.m */; };
+		3BA89C2719C826530015F9C2 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA89C2619C826530015F9C2 /* CameraViewController.m */; };
 		7B44131C19C67E8E0032A411 /* TileOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B44131B19C67E8E0032A411 /* TileOverlayViewController.m */; };
 		7BB6539719BE97190081FEB6 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6539619BE97190081FEB6 /* OverlayViewController.m */; };
 		7BB9550519B8516B00D4DF3A /* anjuke_icon_itis_position@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9550119B8516B00D4DF3A /* anjuke_icon_itis_position@2x.png */; };
@@ -61,6 +62,8 @@
 		3B8F2A0819C6D19F00B316CB /* LocalSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalSearchViewController.m; sourceTree = "<group>"; };
 		3B8F2A0A19C6D1B300B316CB /* DirectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionViewController.h; sourceTree = "<group>"; };
 		3B8F2A0B19C6D1B300B316CB /* DirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionViewController.m; sourceTree = "<group>"; };
+		3BA89C2519C826530015F9C2 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		3BA89C2619C826530015F9C2 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		7B44131A19C67E8E0032A411 /* TileOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileOverlayViewController.h; sourceTree = "<group>"; };
 		7B44131B19C67E8E0032A411 /* TileOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileOverlayViewController.m; sourceTree = "<group>"; };
 		7BB6539519BE97190081FEB6 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 				3B8F2A0819C6D19F00B316CB /* LocalSearchViewController.m */,
 				3B8F2A0A19C6D1B300B316CB /* DirectionViewController.h */,
 				3B8F2A0B19C6D1B300B316CB /* DirectionViewController.m */,
+				3BA89C2519C826530015F9C2 /* CameraViewController.h */,
+				3BA89C2619C826530015F9C2 /* CameraViewController.m */,
 			);
 			path = Mapkit;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				7BD92C4919B571050077C9E5 /* MapkitViewController.m in Sources */,
 				3B8F2A0919C6D19F00B316CB /* LocalSearchViewController.m in Sources */,
 				7BD92C5419B5C7630077C9E5 /* MapViewController.m in Sources */,
+				3BA89C2719C826530015F9C2 /* CameraViewController.m in Sources */,
 				7BD92C3919B56EE00077C9E5 /* BaseViewController.m in Sources */,
 				7BD92C4F19B571220077C9E5 /* GMapkitViewController.m in Sources */,
 				7BE3F37C19C16DD4003E3805 /* OverlayTwoViewController.m in Sources */,
