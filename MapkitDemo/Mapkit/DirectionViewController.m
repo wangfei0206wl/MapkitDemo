@@ -185,30 +185,32 @@
         [_directions cancel];
         _directions = nil;
     }
-    MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
-    request.source = _soure; request.destination = _destionation;
-    request.transportType = MKDirectionsTransportTypeWalking;
-    
-    _directions = [[MKDirections alloc] initWithRequest:request];
+    if (_soure && _destionation) {
+        MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
+        request.source = _soure; request.destination = _destionation;
+        request.transportType = MKDirectionsTransportTypeWalking;
+        
+        _directions = [[MKDirections alloc] initWithRequest:request];
 
-    [_directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
-        if (response && response.routes && response.routes.count > 0) {
-            MKRoute *route = [response.routes objectAtIndex:0];
-            
-            _polyline = route.polyline;
-            [_mkMapView addOverlay:_polyline];
-            
-            _sourceAnnotation = [[MKPointAnnotation alloc] init];
-            _sourceAnnotation.coordinate = _soure.placemark.coordinate;
-            _sourceAnnotation.title = @"起点";
-            [_mkMapView addAnnotation:_sourceAnnotation];
-            
-            _destAnnotation = [[MKPointAnnotation alloc] init];
-            _destAnnotation.coordinate = _destionation.placemark.coordinate;
-            _destAnnotation.title = @"终点";
-            [_mkMapView addAnnotation:_destAnnotation];
-        }
-    }];
+        [_directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
+            if (response && response.routes && response.routes.count > 0) {
+                MKRoute *route = [response.routes objectAtIndex:0];
+                
+                _polyline = route.polyline;
+                [_mkMapView addOverlay:_polyline];
+                
+                _sourceAnnotation = [[MKPointAnnotation alloc] init];
+                _sourceAnnotation.coordinate = _soure.placemark.coordinate;
+                _sourceAnnotation.title = @"起点";
+                [_mkMapView addAnnotation:_sourceAnnotation];
+                
+                _destAnnotation = [[MKPointAnnotation alloc] init];
+                _destAnnotation.coordinate = _destionation.placemark.coordinate;
+                _destAnnotation.title = @"终点";
+                [_mkMapView addAnnotation:_destAnnotation];
+            }
+        }];
+    }
 }
 
 - (void)onClickETA:(id)sender {
@@ -216,21 +218,22 @@
         [_directions cancel];
         _directions = nil;
     }
-    
-    MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
-    request.source = _soure; request.destination = _destionation;
-    request.transportType = MKDirectionsTransportTypeWalking;
+    if (_soure && _destionation) {
+        MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
+        request.source = _soure; request.destination = _destionation;
+        request.transportType = MKDirectionsTransportTypeWalking;
 
-    _directions = [[MKDirections alloc] initWithRequest:request];
-    
-    [_directions calculateETAWithCompletionHandler:^(MKETAResponse *response, NSError *error) {
-        if (response) {
-            NSString *message = [NSString stringWithFormat:@"此地去天安门预估时长为:%@", [self getTimeString:response.expectedTravelTime]];
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            
-            [alertView show];
-        }
-    }];
+        _directions = [[MKDirections alloc] initWithRequest:request];
+        
+        [_directions calculateETAWithCompletionHandler:^(MKETAResponse *response, NSError *error) {
+            if (response) {
+                NSString *message = [NSString stringWithFormat:@"此地去天安门预估时长为:%@", [self getTimeString:response.expectedTravelTime]];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                
+                [alertView show];
+            }
+        }];
+    }
 }
 
 - (NSString *)getTimeString:(NSTimeInterval)timeInteval {
