@@ -3,7 +3,23 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "__38-[DirectionViewController onClickETA:]_block_invoke:DirectionViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.expectedTravelTime">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__47-[LocalSearchViewController onClickSearchHall:]_block_invoke:LocalSearchViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DirectionViewController onClickETA:]:DirectionViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_destionation.name">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "__53-[LocalSearchViewController onClickSearchRestaurant:]_block_invoke:LocalSearchViewController.m">
