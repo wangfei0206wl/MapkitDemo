@@ -11,6 +11,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[CameraViewController onClickSnapshot:]:CameraViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "__47-[LocalSearchViewController onClickSearchHall:]_block_invoke:LocalSearchViewController.m">
       </ContextState>
       <ContextState
@@ -25,13 +28,13 @@
          contextName = "__53-[LocalSearchViewController onClickSearchRestaurant:]_block_invoke:LocalSearchViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "pointAnnotion.title">
-            </PersistentString>
-            <PersistentString
                value = "pointAnnotion.subtitle">
             </PersistentString>
             <PersistentString
                value = "pointAnnotion.coordinate">
+            </PersistentString>
+            <PersistentString
+               value = "pointAnnotion.title">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
