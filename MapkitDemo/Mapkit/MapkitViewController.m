@@ -16,6 +16,8 @@
 #import "LocalSearchViewController.h"
 #import "DirectionViewController.h"
 #import "CameraViewController.h"
+#import "CameraExViewController.h"
+#import "GeocoderViewController.h"
 
 @interface MapkitViewController () {
     NSArray *_arrMenus;
@@ -35,7 +37,7 @@
 }
 
 - (void)initDatas {
-    _arrMenus = [NSArray arrayWithObjects:@"Mapview显示", @"Annotation使用", @"Overlay使用", @"Overlay使用之二", @"TileOverlay使用", @"LocalSearch使用", @"Direction使用", @"地图Camera使用", nil];
+    _arrMenus = [NSArray arrayWithObjects:@"Mapview显示", @"Annotation使用", @"Overlay使用", @"Overlay使用之二", @"TileOverlay使用", @"LocalSearch使用", @"Direction使用", @"地图Camera使用", @"地图Camera扩展使用", @"反地理编码", nil];
 }
 
 - (void)createViews {
@@ -113,6 +115,18 @@
         case 7:
         {
             CameraViewController *controller = [[CameraViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            break;
+        case 8:
+        {
+            CameraExViewController *controller = [[CameraExViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            break;
+        case 9:
+        {
+            GeocoderViewController *controller = [[GeocoderViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;

@@ -167,13 +167,15 @@
     }
     MKMapCamera *camera = [MKMapCamera camera];
     camera.centerCoordinate = _mkMapView.userLocation.coordinate;
-    camera.heading = 90.0f;
+    camera.heading = 0.0f;
     camera.pitch = 30.0f;
     camera.altitude = 450.0f;
     
+    [_mkMapView setCamera:camera animated:YES];
+    
     MKMapSnapshotOptions *options = [[MKMapSnapshotOptions alloc] init];
     options.camera = camera;
-    options.region = MKCoordinateRegionMakeWithDistance(_mkMapView.userLocation.coordinate, 5000, 5000);
+    options.region = MKCoordinateRegionMakeWithDistance(_mkMapView.userLocation.coordinate, 10000, 10000);
     options.showsPointsOfInterest = YES;
     options.showsBuildings = YES;
     options.size = CGSizeMake(512, 512);

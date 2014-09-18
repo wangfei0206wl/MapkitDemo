@@ -10,7 +10,9 @@
 		3B8F2A0919C6D19F00B316CB /* LocalSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F2A0819C6D19F00B316CB /* LocalSearchViewController.m */; };
 		3B8F2A0C19C6D1B300B316CB /* DirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F2A0B19C6D1B300B316CB /* DirectionViewController.m */; };
 		3BA89C2719C826530015F9C2 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA89C2619C826530015F9C2 /* CameraViewController.m */; };
+		3BAE4DBA19CA6BCA00E636AB /* GeocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE4DB919CA6BCA00E636AB /* GeocoderViewController.m */; };
 		3BCA7BFC19C91D3300C56DC7 /* ImageShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCA7BFB19C91D3300C56DC7 /* ImageShowViewController.m */; };
+		3BCA7BFF19C97D7F00C56DC7 /* CameraExViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCA7BFE19C97D7F00C56DC7 /* CameraExViewController.m */; };
 		7B44131C19C67E8E0032A411 /* TileOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B44131B19C67E8E0032A411 /* TileOverlayViewController.m */; };
 		7BB6539719BE97190081FEB6 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6539619BE97190081FEB6 /* OverlayViewController.m */; };
 		7BB9550519B8516B00D4DF3A /* anjuke_icon_itis_position@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9550119B8516B00D4DF3A /* anjuke_icon_itis_position@2x.png */; };
@@ -65,8 +67,12 @@
 		3B8F2A0B19C6D1B300B316CB /* DirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionViewController.m; sourceTree = "<group>"; };
 		3BA89C2519C826530015F9C2 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		3BA89C2619C826530015F9C2 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		3BAE4DB819CA6BCA00E636AB /* GeocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocoderViewController.h; sourceTree = "<group>"; };
+		3BAE4DB919CA6BCA00E636AB /* GeocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeocoderViewController.m; sourceTree = "<group>"; };
 		3BCA7BFA19C91D3300C56DC7 /* ImageShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageShowViewController.h; sourceTree = "<group>"; };
 		3BCA7BFB19C91D3300C56DC7 /* ImageShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageShowViewController.m; sourceTree = "<group>"; };
+		3BCA7BFD19C97D7F00C56DC7 /* CameraExViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraExViewController.h; sourceTree = "<group>"; };
+		3BCA7BFE19C97D7F00C56DC7 /* CameraExViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraExViewController.m; sourceTree = "<group>"; };
 		7B44131A19C67E8E0032A411 /* TileOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileOverlayViewController.h; sourceTree = "<group>"; };
 		7B44131B19C67E8E0032A411 /* TileOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileOverlayViewController.m; sourceTree = "<group>"; };
 		7BB6539519BE97190081FEB6 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
@@ -295,6 +301,10 @@
 				3BA89C2619C826530015F9C2 /* CameraViewController.m */,
 				3BCA7BFA19C91D3300C56DC7 /* ImageShowViewController.h */,
 				3BCA7BFB19C91D3300C56DC7 /* ImageShowViewController.m */,
+				3BCA7BFD19C97D7F00C56DC7 /* CameraExViewController.h */,
+				3BCA7BFE19C97D7F00C56DC7 /* CameraExViewController.m */,
+				3BAE4DB819CA6BCA00E636AB /* GeocoderViewController.h */,
+				3BAE4DB919CA6BCA00E636AB /* GeocoderViewController.m */,
 			);
 			path = Mapkit;
 			sourceTree = "<group>";
@@ -407,11 +417,13 @@
 				3BCA7BFC19C91D3300C56DC7 /* ImageShowViewController.m in Sources */,
 				7BD92C1319B56D0D0077C9E5 /* AppDelegate.m in Sources */,
 				7B44131C19C67E8E0032A411 /* TileOverlayViewController.m in Sources */,
+				3BAE4DBA19CA6BCA00E636AB /* GeocoderViewController.m in Sources */,
 				7BCCA60F19B6BA6C00EC6CEB /* TestObject.m in Sources */,
 				7BD92C4C19B571140077C9E5 /* BMapkitViewController.m in Sources */,
 				3B8F2A0C19C6D1B300B316CB /* DirectionViewController.m in Sources */,
 				7BB6539719BE97190081FEB6 /* OverlayViewController.m in Sources */,
 				7BD92C4919B571050077C9E5 /* MapkitViewController.m in Sources */,
+				3BCA7BFF19C97D7F00C56DC7 /* CameraExViewController.m in Sources */,
 				3B8F2A0919C6D19F00B316CB /* LocalSearchViewController.m in Sources */,
 				7BD92C5419B5C7630077C9E5 /* MapViewController.m in Sources */,
 				3BA89C2719C826530015F9C2 /* CameraViewController.m in Sources */,
