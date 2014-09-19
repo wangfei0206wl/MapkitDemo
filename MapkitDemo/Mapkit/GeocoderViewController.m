@@ -87,15 +87,16 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     
     [alert show];
-    
+#if 0
     double dist = MKMetersPerMapPointAtLatitude(30);
     dist = MKMapPointsPerMeterAtLatitude(30);
     CLLocationCoordinate2D coord = MKCoordinateForMapPoint(point);
     
     NSLog(@"");
+#endif
 }
 
-#pragma mark - 
+#pragma mark -
 #pragma mark MKReverseGeocoderDelegate
 
 - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark {
