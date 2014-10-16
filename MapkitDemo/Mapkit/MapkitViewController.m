@@ -19,8 +19,10 @@
 #import "CameraExViewController.h"
 #import "GeocoderViewController.h"
 
-@interface MapkitViewController () {
+@interface MapkitViewController () <CLLocationManagerDelegate> {
     NSArray *_arrMenus;
+    
+    CLLocationManager *_manager;
 }
 
 @end
@@ -58,6 +60,16 @@
     [self setTitle:@"Mapkit"];
     [self initDatas];
     [self createViews];
+    
+    [self performSelector:@selector(AuthLocation) withObject:nil afterDelay:1.0];
+}
+
+- (void)AuthLocation {
+    _manager = [[CLLocationManager alloc] init];
+    _manager.delegate = self;
+    if ([_manager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [_manager requestAlwaysAuthorization];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -154,6 +166,10 @@
     cell.textLabel.text = item;
     
     return cell;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    
 }
 
 @end
